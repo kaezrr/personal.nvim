@@ -15,6 +15,16 @@ return { -- Collection of various small independent plugins/modules
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
+    require('mini.icons').setup()
+    require('mini.starter').setup { footer = '' }
+    require('mini.pairs').setup()
+
+    -- File system
+    local files = require 'mini.files'
+    files.setup()
+    vim.keymap.set('n', '<leader>e', function()
+      files.open(vim.api.nvim_buf_get_name(0), false)
+    end, { desc = 'Open [E]xplorer' })
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,

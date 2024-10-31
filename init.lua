@@ -33,7 +33,7 @@ vim.opt.scrolloff = 8
 
 -- Some high power remaps
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -102,7 +102,7 @@ require('lazy').setup({
   },
   { 'Bilal2453/luvit-meta', lazy = true },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  --require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.gitsigns',
   require 'kickstart.plugins.lsp-config',

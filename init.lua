@@ -89,39 +89,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 --    :Lazy
---    :Lazy update
 require('lazy').setup({
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-  { 'Bilal2453/luvit-meta', lazy = true },
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.gitsigns',
-  require 'kickstart.plugins.lsp-config',
-  require 'kickstart.plugins.mini',
-  require 'kickstart.plugins.nvim-treesitter',
-  require 'kickstart.plugins.nvim-cmp',
-  require 'kickstart.plugins.conform',
-  require 'kickstart.plugins.gitsigns',
-  require 'kickstart.plugins.telescope',
-  require 'kickstart.plugins.which-key',
-  require 'kickstart.plugins.vim-sleuth',
-  require 'kickstart.plugins.lazydev',
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

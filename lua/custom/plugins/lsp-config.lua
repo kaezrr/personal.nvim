@@ -163,6 +163,9 @@ return {
     local servers = {
       clangd = {},
       ts_ls = {},
+      emmet_language_server = {
+        filetypes = { 'html' },
+      },
 
       lua_ls = {
         -- cmd = {...},
@@ -193,8 +196,13 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
-      'prettierd',
+      'prettier',
+      'clangd',
       'clang-format',
+      'typescript-language-server',
+      'emmet-language-server',
+      'css-lsp',
+      'html-lsp',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

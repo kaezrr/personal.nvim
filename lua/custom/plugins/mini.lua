@@ -18,6 +18,15 @@ return { -- Collection of various small independent plugins/modules
     require('mini.icons').setup()
     require('mini.starter').setup { footer = '' }
     require('mini.pairs').setup()
+    require('mini.hipatterns').setup {
+      highlighters = {
+        fixme = { pattern = 'FIXME', group = 'MiniHipatternsFixme' },
+        hack = { pattern = 'HACK', group = 'MiniHipatternsHack' },
+        todo = { pattern = 'TODO', group = 'MiniHipatternsTodo' },
+        note = { pattern = 'NOTE', group = 'MiniHipatternsNote' },
+        hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
+      },
+    }
 
     -- File system
     local files = require 'mini.files'
@@ -27,10 +36,7 @@ return { -- Collection of various small independent plugins/modules
     end, { desc = 'Open [E]xplorer' })
 
     -- Simple and easy statusline.
-    --  You could remove this setup call if you don't like it,
-    --  and try some other statusline plugin
     local statusline = require 'mini.statusline'
-    -- set use_icons to true if you have a Nerd Font
     statusline.setup { use_icons = vim.g.have_nerd_font }
 
     -- You can configure sections in the statusline by overriding their
@@ -40,8 +46,5 @@ return { -- Collection of various small independent plugins/modules
     statusline.section_location = function()
       return '%2l:%-2v'
     end
-
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
   end,
 }

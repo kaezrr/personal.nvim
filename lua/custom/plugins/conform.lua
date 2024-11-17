@@ -39,6 +39,7 @@ return { -- Autoformat
       markdown = { 'prettier' },
       json = { 'prettier' },
       javascript = { 'prettier' },
+      sh = { 'beautysh' },
     },
   },
 }

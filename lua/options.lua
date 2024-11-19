@@ -17,6 +17,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = false
 vim.opt.scrolloff = 8
+vim.opt.fillchars = { eob = ' ' }
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()

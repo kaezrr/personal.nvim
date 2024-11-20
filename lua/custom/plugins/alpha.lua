@@ -6,49 +6,104 @@ return {
   opts = function()
     local dashboard = require 'alpha.themes.dashboard'
     -- Define and set highlight groups for each logo line
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo1', { fg = '#311B92' })
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo2', { fg = '#512DA8' })
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo3', { fg = '#673AB7' })
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo4', { fg = '#9575CD' })
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo5', { fg = '#B39DDB' })
-    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo6', { fg = '#D1C4E9' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo1', { fg = '#641220' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo2', { fg = '#6e1423' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo3', { fg = '#85182a' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo4', { fg = '#a11d33' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo5', { fg = '#a71e34' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo6', { fg = '#b21e35' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo7', { fg = '#bd1f36' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo8', { fg = '#c71f37' })
+    vim.api.nvim_set_hl(0, 'NeovimDashboardLogo9', { fg = '#da1e37' })
     dashboard.section.header.type = 'group'
     dashboard.section.header.val = {
       {
         type = 'text',
-        val = '   ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ',
+        val = '           .*-.         ',
         opts = { hl = 'NeovimDashboardLogo1', shrink_margin = false, position = 'center' },
       },
       {
         type = 'text',
-        val = '   ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ',
+        val = '       -:   @+  .=      ',
+        opts = { hl = 'NeovimDashboardLogo1', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '     .*-    @=    #-    ',
         opts = { hl = 'NeovimDashboardLogo2', shrink_margin = false, position = 'center' },
       },
       {
         type = 'text',
-        val = '   ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ',
+        val = '    +@-     @=     %*.  ',
+        opts = { hl = 'NeovimDashboardLogo2', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '   =@%:     @=     *@*  ',
         opts = { hl = 'NeovimDashboardLogo3', shrink_margin = false, position = 'center' },
       },
       {
         type = 'text',
-        val = '   ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ',
+        val = '    .+@#.   @=   =@*:   ',
+        opts = { hl = 'NeovimDashboardLogo3', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '       =%*. @= -%*.     ',
         opts = { hl = 'NeovimDashboardLogo4', shrink_margin = false, position = 'center' },
       },
       {
         type = 'text',
-        val = '   ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ',
+        val = '         =%*@##+.       ',
+        opts = { hl = 'NeovimDashboardLogo4', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '          =@@@%-        ',
         opts = { hl = 'NeovimDashboardLogo5', shrink_margin = false, position = 'center' },
       },
       {
         type = 'text',
-        val = '   ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ',
+        val = '        +@#:@*=%#:      ',
+        opts = { hl = 'NeovimDashboardLogo5', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '     .+@%-  @+  =@#-    ',
         opts = { hl = 'NeovimDashboardLogo6', shrink_margin = false, position = 'center' },
       },
       {
-        type = 'padding',
-        val = 1,
+        type = 'text',
+        val = '   .+@%-    @+   .+@#:  ',
+        opts = { hl = 'NeovimDashboardLogo6', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '   =@@=     @+    :#@*  ',
+        opts = { hl = 'NeovimDashboardLogo7', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '     =%%-   @+  .*@*.   ',
+        opts = { hl = 'NeovimDashboardLogo7', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '       =%%- @+ +@#:     ',
+        opts = { hl = 'NeovimDashboardLogo8', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '         =%%@%@#:       ',
+        opts = { hl = 'NeovimDashboardLogo8', shrink_margin = false, position = 'center' },
+      },
+      {
+        type = 'text',
+        val = '           -#*:         ',
+        opts = { hl = 'NeovimDashboardLogo9', shrink_margin = false, position = 'center' },
       },
     }
+
     dashboard.section.buttons.val = {
       dashboard.button('f', ' ' .. ' Find file', '<cmd> Telescope find_files <cr>'),
       dashboard.button('r', ' ' .. ' Recent files', '<cmd> Telescope oldfiles <cr>'),
